@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Environnement virtuel
+.venv/
+venv/
+
+# Base SQLite locale
+*.db
+*.sqlite
+*.sqlite3
+
+# Fichiers d'import reels (les CSV de demonstration restent versionnes)
+data/imports/
+uploads/
+
+# Outils
+.pytest_cache/
+.uv/
