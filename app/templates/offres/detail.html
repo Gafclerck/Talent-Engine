@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ offre.titre }}</h2>
+<p>{{ offre.description if offre.description else '' }}</p>
+<p><a href="/offres/{{ offre.id }}/modifier">Modifier</a> | <a href="/offres">Retour à la liste</a></p>
+{% endblock %}

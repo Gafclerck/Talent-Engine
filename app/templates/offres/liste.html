@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Offres</h2>
+<a href="/offres/creer">Créer une offre</a>
+
+{% if offres %}
+<ul>
+  {% for offre in offres %}
+  <li>
+    <a href="/offres/{{ offre.id }}">{{ offre.titre }}</a>
+    {% if offre.description %} - {{ offre.description }}{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>Aucune offre pour le moment</p>
+{% endif %}
+{% endblock %}

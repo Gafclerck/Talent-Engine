@@ -15,3 +15,5 @@ class Base(DeclarativeBase):
     Aucune table n'est creee ici : le schema appartient aux stories qui
     introduisent les modeles (1.2+).
     """
+
+# S'assurer que le moteur est accessible globalement (déjà défini ci-dessus)

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{% if offre %}Modifier l'offre{% else %}Créer une offre{% endif %}</h2>
+
+<form method="post" action="{% if offre %}/offres/{{ offre.id }}/modifier{% else %}/offres/creer{% endif %}">
+  <div>
+    <label for="titre">Titre</label>
+    <input type="text" id="titre" name="titre" value="{% if offre %}{{ offre.titre }}{% endif %}" required />
+  </div>
+  <div>
+    <label for="description">Description</label>
+    <textarea id="description" name="description">{% if offre and offre.description %}{{ offre.description }}{% endif %}</textarea>
+  </div>
+  <button type="submit">Enregistrer</button>
+  <a href="/offres">Annuler</a>
+</form>
+{% endblock %}
